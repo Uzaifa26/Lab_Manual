@@ -1,0 +1,14 @@
+body {
+    background-color: lightyellow;
+    font-family: Verdana, sans-serif;
+}
+
+h3 {
+    color: purple;
+    text-decoration: underline;
+}
+
+p {
+    color: darkblue;
+    font-size: 14px;
+}
