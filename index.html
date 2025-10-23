@@ -1,31 +1,76 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Online Lab Manual</title>
-        <link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Lab Manual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            padding: 1.5rem;
+            max-width: 64rem; 
+            margin: 0 auto;
+        }
+        .experiment-link:hover {
+            transform: translateX(5px);
+            color: #1e40af;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
 
-    </head>
-    <body>
-    <h1 style = "text-align:center">My Online Lab Manual</h1>
-    <hr>
-    <h2 style = "text-align:center"><i>Name : Muhammad Uzaifa</i></h2>
-    <h2 style = "text-align:center"><i>Department : Computer Engineering</i></h2>
-    <h2 style = "text-align:center"><i>Reg# number : FA22-BCE-034</i></h2>
-    <h2 style = "text-align:center"><i>Course : Web Technology</i></h2>
-    <hr>
-    <p>This is my personal collection of lab experiments.</p>
+    <header class="text-center mb-10">
+        <h1 class="text-4xl font-medium italic text-gray-900 mb-2 border-b-4 border-blue-500 pb-2 inline-block">
+            My Online Lab Manual
+        </h1>
+    </header>
 
-    <p><a href="Lab_Report_01.html">View Lab Report 1: HTML Basics</a></p>
-    <p><a href="Lab_Report_02.html">View Lab Report 2: Creating and Publishing an Online Lab Manual</a></p>
-    <p><a href="Lab_Report_03.html">View Lab Report 3: Working with Tables, Lists, Images, and Hyperlinks</a></p>
-    <p><a href="Lab_Report_04.html">View Lab Report 4: Applying CSS to HTML (Inline, Internal, and External Styles)</a></p>
-    <p><a href="Lab_Report_05.html">View Lab Report 5: Exploring CSS Selectors</a></p>
-    </body>
+    <section class="mb-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+            <div class="space-y-1">
+                <p class="text-base"><span class="font-medium">Name:</span> Muhammad Uzaifa</p>
+                <p class="text-base"><span class="font-medium">Registration ID:</span> FA22-BCE-034</p>
+            </div>
+            <div class="space-y-1">
+                <p class="text-base"><span class="font-medium">Course:</span> Web Technology</p>
+                <p class="text-base"><span class="font-medium">Department:</span> Computer Engineering</p>
+            </div>
+        </div>
+    </section>
 
-    </html>
+    <hr class="my-8 border-gray-300">
 
+    <section>
+        <p class="text-lg text-gray-700 mb-6">This is my personal collection of lab experiments.</p>
 
+        <ul class="space-y-4">
+            <li class="border-b pb-4 last:border-b-0 last:pb-0">
+                <a href="Lab_Report_01.html" class="experiment-link block transition duration-300 ease-in-out text-blue-700 hover:text-blue-900 text-lg">
+                    <u>View Lab Report 1: HTML Basics</u></a>
+            </li>
+           
+            <li class="border-b pb-4 last:border-b-0 last:pb-0">
+                <a href="Lab_Report_02.html" class="experiment-link block transition duration-300 ease-in-out text-blue-700 hover:text-blue-900 text-lg">
+                    <u>View Lab Report 2: Creating and Publishing an Online Lab Manual</u></a>
+            </li>
 
+            <li class="border-b pb-4 last:border-b-0 last:pb-0">
+                <a href="Lab_Report_03.html" class="experiment-link block transition duration-300 ease-in-out text-blue-700 hover:text-blue-900 text-lg">
+                    <u>View Lab Report 3: Working with Tables, Lists, Images, and Hyperlinks</u></a>
+            </li>
 
+            <li class="border-b pb-4 last:border-b-0 last:pb-0">
+                <a href="Lab_Report_04.html" class="experiment-link block transition duration-300 ease-in-out text-blue-700 hover:text-blue-900 text-lg">
+                    <u>View Lab Report 4: Applying CSS to HTML (Inline, Internal, and External Styles)</u></a>
+            </li>
+
+            <li class="border-b pb-4 last:border-b-0 last:pb-0">
+                <a href="Lab_Report_05.html" class="experiment-link block transition duration-300 ease-in-out text-blue-700 hover:text-blue-900 text-lg">
+                    <u>View Lab Report 5: Exploring CSS Selectors</u></a>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
