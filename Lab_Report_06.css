@@ -4,12 +4,11 @@ body {
     line-height: 1.6;
     background-color: #faebd7; 
 }
-
 #center, h1, h2, h3 {
     text-align: center;
 }
 
-/*     DESKTOP FLEXBOX        */
+/*---------------DESKTOP FLEXBOX-------------*/
 
 .container {
     border: 2px solid #425b7a;
@@ -20,7 +19,6 @@ body {
     align-items: center;
     box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
 }
-
 h1 {
     color: #002b80;
 }
@@ -36,11 +34,15 @@ h2, h3 {
     font-weight: bold;
     color: #8b0000; 
 }
+.desktop-list li:hover {
+    color: red;
+    cursor: pointer;
+}
 .mcontainer {
     display: none;
 }
 
-/*         MOBILE VIEW        */
+/*----------------MOBILE VIEW---------------*/
 
 @media (max-width: 480px) {
 
@@ -62,18 +64,19 @@ h2, h3 {
         border-radius: 6px;
         box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
     }
-
     .mcontainer h2 {
         color: #000080;
     }
-
     .mobile-list li {
         margin: 10px 0;
         color: #0033cc;
         font-size: 18px;
         font-weight: 600;
     }
-
+    .mobile-list li:hover {
+    color: red;
+    cursor: pointer;
+    }
     .mobile-list li.special {
         align-self: center;
         color: #cc0000;
