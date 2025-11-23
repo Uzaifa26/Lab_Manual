@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7: Javascript Fundamentals(Console web interactivity)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            background-color: whitesmoke;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lab Experiment 07</h1>
+    <button onclick="task1()">Task 1: Prompt & Alert</button>
+    <button onclick="task2()">Task 2: Arithmetic and Comparison</button>
+    <div class="output" id="result"></div>
+    <script>
+
+        function task1() {
+            var name = prompt("Enter your Name:");
+            var reg = prompt("Enter your Registration ID:");
+            alert("Name: " + name + "\nRegistration ID: " + reg);
+            console.log("Task 1 Output:");
+            console.log("Name:", name);
+            console.log("Registration ID:", reg);
+        }
+
+        function task2() {
+            var num1 = prompt("Enter first number:");
+            var num2 = prompt("Enter second number:");
+            var sum = num1 + num2;
+            var diff = num1 - num2;
+            var product = num1 * num2;
+            var quotient = num1 / num2;
+            var comparison = num1 < num2;
+            var message = "Sum: " + sum + "\n" + "Difference: " + diff + "\n" + "Product: " + product + "\n" +
+                          "Quotient: " + quotient + "\n" + "Is first number greater than second? " + comparison;
+            alert(message);
+
+            document.getElementById("result").innerText = message;
+
+            console.log("Task 2 Output:");
+            console.log("Type of num1:", typeof num1, "Value:", num1);
+            console.log("Type of num2:", typeof num2, "Value:", num2);
+            console.log("Sum:", sum);
+            console.log("Difference:", diff);
+            console.log("Product:", product);
+            console.log("Quotient:", quotient);
+            console.log("Comparison (num1 > num2):", comparison);
+        }
+    </script>
+</body>
+</html>
