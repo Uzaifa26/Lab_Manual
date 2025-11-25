@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 03 - Quiz App</title>
+    <link rel="stylesheet" href="Assig_03.css">
+    <script src="Assig_03.js" defer></script>
+</head>
+<body>
+    <div class="mainBox">
+
+        <div id="startArea" class="screen">
+            <h1 class="heading">Simple Quiz</h1>
+            <p class="infoText">Click the button to begin</p>
+            <button id="startBtn" class="btn">Start Quiz</button>
+        </div>
+
+        <div id="quizArea" class="screen hidden">
+            <h2 id="qTitle" class="question"></h2>
+            <div id="optionsArea"></div>
+            <button id="nextBtn" class="btn hidden">Next</button>
+        </div>
+
+        <div id="resultArea" class="screen hidden">
+            <h1>Result</h1>
+            <h2 id="scoreBox"></h2>
+            <p id="msgBox"></p>
+            <button id="restartBtn" class="btn">Restart</button>
+        </div>
+    </div>
+
+</body>
+</html>
