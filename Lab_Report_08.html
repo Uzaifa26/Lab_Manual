@@ -1,1 +1,52 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Elements Page</title>
+    <link rel="stylesheet" href="Lab_Report_08.css">
+</head>
+<body>
+<h1>Interactive Playground</h1>
+<p class="info">Hover, Click, or Interact with any element to see magic happen!</p>
+<div class="container">
+    <div id="colorBox" class="box">Change my colour</div>
+    <p id="textBlock" class="text-block">Hover over this text to enlarge me!</p>
+    <div id="circle" class="circle">doublelclick</div>
+    <button id="growBtn" class="grow-btn">Hover to Grow me</button>
+    <div id="shape" class="shape">Click Shape</div>
+</div>
+<script>
+document.getElementById("colorBox").onclick = function () {
+    const colors = ["#ff9999", "#99ff99", "#99ccff", "#ffcc66", "#cc99ff"];
+    this.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+};
+document.getElementById("textBlock").onmouseover = function () {
+    this.style.fontSize = "22px";
+    this.style.background = "#b3daff";
+};
+document.getElementById("textBlock").onmouseout = function () {
+    this.style.fontSize = "16px";
+    this.style.background = "#e6f2ff";
+};
+document.getElementById("circle").ondblclick = function () {
+    this.style.position = "relative";
+    this.style.left = (Math.random() * 40 - 20) + "px";
+    this.style.top = (Math.random() * 40 - 20) + "px";
+};
+document.getElementById("growBtn").onmouseover = function () {
+    this.style.transform = "scale(1.3)";
+};
+document.getElementById("growBtn").onmouseout = function () {
+    this.style.transform = "scale(1)";
+};
+document.getElementById("shape").onclick = function () {
+    if (this.style.borderRadius === "50%") {
+        this.style.borderRadius = "10px";
+        this.style.background = "#ffe09f";
+    } else {
+        this.style.borderRadius = "50%";
+        this.style.background = "#ffb84d";
+    }
+};
+</script>
+</body>
+</html>
