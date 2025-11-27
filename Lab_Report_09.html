@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Elements Page</title>
+    <link rel="stylesheet" href="Lab_Report_08.css">
+</head>
+<body>
+<h1>Interactive Playground</h1>
+<p class="info">Hover, Click, or Interact with any element to see magic happen!</p>
+<div class="container">
+    <div id="colorBox" class="box">Change my colour</div>
+    <p id="textBlock" class="text-block">Hover over this text to enlarge me!</p>
+    <div id="circle" class="circle">doublelclick</div>
+    <button id="growBtn" class="grow-btn">Hover to Grow me</button>
+    <div id="shape" class="shape">Click Shape</div>
+</div>
+<hr></hr>
+<h2>Reflection:</h2>
+<p>Working on this interactive webpage helped me understand event handling in 
+    a much more practical way. Instead of just reading about events like click,
+    hover, and double-click, I actually used them to make different elements 
+    respond with color changes, size adjustments, movements, and shape transformations. 
+    Designing these interactions made the connection between JavaScript events 
+    and DOM manipulation very clear to me, especially when using the this keyword
+    to refer to the active element. Through trial and error, I learned how each 
+    event can create a unique user experience and how important it is to write clean,
+    responsive, and easy-to-understand code. Overall, this open-ended experiment improved
+    both my creativity and my confidence in handling events in JavaScript</p>
+<script>
+document.getElementById("colorBox").onclick = function () {
+    const colors = ["#ff9999", "#99ff99", "#99ccff", "#ffcc66", "#cc99ff"];
+    this.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+};
+document.getElementById("textBlock").onmouseover = function () {
+    this.style.fontSize = "22px";
+    this.style.background = "#b3daff";
+};
+document.getElementById("textBlock").onmouseout = function () {
+    this.style.fontSize = "16px";
+    this.style.background = "#e6f2ff";
+};
+document.getElementById("circle").ondblclick = function () {
+    this.style.position = "relative";
+    this.style.left = (Math.random() * 40 - 20) + "px";
+    this.style.top = (Math.random() * 40 - 20) + "px";
+};
+document.getElementById("growBtn").onmouseover = function () {
+    this.style.transform = "scale(1.3)";
+};
+document.getElementById("growBtn").onmouseout = function () {
+    this.style.transform = "scale(1)";
+};
+document.getElementById("shape").onclick = function () {
+    if (this.style.borderRadius === "50%") {
+        this.style.borderRadius = "10px";
+        this.style.background = "#ffe09f";
+    } else {
+        this.style.borderRadius = "50%";
+        this.style.background = "#ffb84d";
+    }
+};
+</script>
+</body>
+</html>
