@@ -38,6 +38,7 @@ document.getElementById("growBtn").onmouseover = function () {
 document.getElementById("growBtn").onmouseout = function () {
     this.style.transform = "scale(1)";
 };
+/* 
 document.getElementById("shape").onclick = function () {
     if (this.style.borderRadius === "50%") {
         this.style.borderRadius = "10px";
@@ -45,6 +46,22 @@ document.getElementById("shape").onclick = function () {
     } else {
         this.style.borderRadius = "50%";
         this.style.background = "#ffb84d";
+    }
+};*/
+document.getElementById("shape").onclick = function () {
+    let currentState = this.style.borderRadius;
+
+    switch (currentState) {
+        case "50%":    
+            this.style.borderRadius = "10px";
+            this.style.background = "#ffe09f";
+            break;
+
+        case "10px":   
+        default:        
+            this.style.borderRadius = "50%";
+            this.style.background = "#ffb84d";
+            break;
     }
 };
 </script>
